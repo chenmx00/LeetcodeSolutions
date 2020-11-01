@@ -9,6 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+// A very good question
 class Solution {
 public:
     int ret;
@@ -17,6 +18,7 @@ public:
         uniValPath(root);
         return ret;
     }
+    
     
     int uniValPath(TreeNode* root){
         if (root == NULL) return 0;
@@ -32,6 +34,5 @@ public:
         }
         ret = std::max(ret, cur_left + cur_right);
         return std::max(cur_left, cur_right);
-        
     }
 };
