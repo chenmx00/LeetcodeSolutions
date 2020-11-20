@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int climbStairs(int n) {
+        if (n <= 2) {
+            return n;
+        }
+        int fl1 = 1;
+        int fl2 = 2;
+        for(int i = 2; i < n; i++) {
+            int cur = fl1 + fl2;
+            fl1 = fl2;
+            fl2 = cur;
+        }
+        return fl2;
+        
+    }
+};
